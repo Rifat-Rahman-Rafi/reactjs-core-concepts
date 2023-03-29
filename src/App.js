@@ -14,9 +14,17 @@ const customStyle={
 function App() {
   return (
     <div className="App">
+
+      <Person></Person>
+      <Person></Person>
      
     </div>
   );
+}
+
+
+function Person(){
+  return <h1>Shakib AL Hasan</h1>
 }
 
 export default App;
