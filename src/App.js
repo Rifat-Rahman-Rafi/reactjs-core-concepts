@@ -11,13 +11,30 @@ const customStyle={
   
 }
 
+const singers=[
+  {name:"Dr.MAhfuj",job:"singer"},
+  {name:"Neha",job:"singer"},
+  {name:"Kobita",job:"singer"},
+
+]
+
 function App() {
+
+  const nayoks=["Bappa Raj","Rubel","Rubel","Kuber","Salman Sha","Riyaj","Anwar"]
   return (
     <div className="App">
 
-      <Person name="Bappa Raj" nayka="Mousumi"></Person>
+      {
+        nayoks.map(nayok=> <Person name={nayok}></Person>)
+      }
+
+      {
+        singers.map(singer=><Person name={singer.name}></Person>)
+      }
+
+      {/* <Person name="Bappa Raj" nayka="Mousumi"></Person>
       <Person name="Rubel" nayka="Cheka"></Person>
-      <Person name="Kuber" nayka="Kopila"></Person>
+      <Person name="Kuber" nayka="Kopila"></Person> */}
      
       <Friend movie="Singam" phone="01776"></Friend>
       <Friend movie="Sultan" phone="01309"></Friend>
