@@ -15,16 +15,34 @@ function App() {
   return (
     <div className="App">
 
-      <Person></Person>
-      <Person></Person>
+      <Person name="Bappa Raj" nayka="Mousumi"></Person>
+      <Person name="Rubel" nayka="Cheka"></Person>
+      <Person name="Kuber" nayka="Kopila"></Person>
+     
+      <Friend movie="Singam" phone="01776"></Friend>
+      <Friend movie="Sultan" phone="01309"></Friend>
      
     </div>
   );
 }
 
 
-function Person(){
-  return <h1>Shakib AL Hasan</h1>
+function Person(props){
+  return (
+    <div className='person'>
+      <h1>{props.name}</h1>
+      <p>Nayka:{props.nayka}</p>
+    </div>
+  )
+}
+
+function Friend(props){
+  return(
+    <div className='container'>
+      <h3>Name : {props.movie}</h3>
+      <p>phone : {props.phone}</p>
+    </div>
+  )
 }
 
 export default App;
